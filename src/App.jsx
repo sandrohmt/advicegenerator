@@ -5,7 +5,7 @@ function App() {
     <div>
       <Advice></Advice>
       <footer>
-            <div className="attribution">
+        <div className="attribution">
         Challenge by
         <a 
         href="https://www.frontendmentor.io?ref=challenge" 
@@ -14,7 +14,7 @@ function App() {
           Frontend Mentor
           </a>. Coded by 
           <a href="#">
-          Your Name Here</a>.
+          Sandro Henrique</a>.
       </div>
       </footer>
     </div>
