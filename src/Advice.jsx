@@ -2,39 +2,37 @@ import { useEffect, useState } from "react";
 
 function Advice() {
 
-  const [info, setInfo] = useState()
+  const [advice, setAdvice] = useState()
+  const [id, setId] = useState()
 
   const URL = "https://api.adviceslip.com/advice"
 
   async function getRandomAdvice() {
     const resp = await fetch(URL)
     const data = await resp.json()
-    const newInfo = await {
-      id: data.slip.id,
-      advice: data.slip.advice
-    }
-    await setInfo(newInfo)
+    const {slip} = data
+    const {id, advice} = slip
+    setAdvice(advice)
+    setId(id)
   }  
 
   useEffect(() => {
     getRandomAdvice()
   }, [])
 
-
-
-
-
   return (
     <div className='main'>
         <div className='title'>
-          <h1>ADVICE #{info.id}</h1>
+          <h1>ADVICE #{id}</h1>
         </div>
         <div className="advice">
-          {info.advice}
+          {advice}
         </div>
-        <div className="divisor"></div>
-        <div className='img-dice'>
-          <img src="./src/assets/icon-dice.svg" alt="Icone de um dado" />
+        <div className="divider">
+          <img src="./src/assets/pattern-divider-desktop.svg" alt="" />
+        </div>
+        <div className='btn-dice'>
+          <img onClick={getRandomAdvice} src="./src/assets/icon-dice.svg" alt="Icone de um dado" />
         </div>
     </div>
   )
