@@ -26,7 +26,7 @@ function Advice() {
           <h1>ADVICE #{id}</h1>
         </div>
         <div className="advice">
-          {advice}
+          "{advice}"
         </div>
         <div className="divider">
           <img src="./src/assets/pattern-divider-desktop.svg" alt="" />

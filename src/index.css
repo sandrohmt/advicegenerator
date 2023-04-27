@@ -17,13 +17,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 
   background: var(--dark-blue);
 }
 
 .main {
   width: 1440px;
-  height: 250px;
+  height: 25.5vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -46,6 +47,7 @@ body {
 .advice {
   color: var(--light-cyan);
   font-size: 28px;
+  text-align: center;
 }
 
 .btn-dice {
@@ -61,7 +63,7 @@ body {
   align-items: center;
 
   position: absolute;
-  bottom: 330px; /* ajuste o valor para posicionar o botão como desejar */
+  top: 59.5vh;
   left: 50%;
   transform: translateX(-50%);
 
@@ -108,4 +110,31 @@ footer {
 
 a {
   color: black;
+}
+
+@media (max-width: 1440px) {
+  .main {
+    width: 375px;
+  }
+
+  .title {
+    font-size: 6px;
+  }
+
+  .advice {
+    font-size: 15px;
+  }
+
+  .btn-dice {
+    width: 45px;
+    height: 45px;
+  }
+
+  .divider {
+    widht: 100px;
+  }
+
+  .divider img {
+    content: url('./src/assets/pattern-divider-mobile.svg');
+  }
 }
